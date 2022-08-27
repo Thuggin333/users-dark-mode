@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+.darkBgr {
+  height: 100vh;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.lightBgr {
+  background-color: white;
+  transition: 0.4s;
+}
+
+.dark {
+  color: white;
+  transition: 0.4s;
+}
+
+.light {
+  color: black;
+  transition: 0.4s;
+}
+
+#main {
+  margin-top: 100px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 30px;
+  height: 100vh;
+}
+#main .user {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#main .user img {
+  width: 100px;
+  height: 100px;
+}
+#main .user .btns {
+  display: flex;
+}
+
+#mainPost {
+  margin-top: 100px;
+  padding: 10px;
+}
+#mainPost .post {
+  padding: 20px;
+  cursor: pointer;
+}
+
+#parentComment {
+  margin-top: 100px;
+  padding: 5px;
+}
+
+#mainAlbum {
+  margin-top: 100px;
+}
+
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17c3b2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17c3b2;
+}
+
+button::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17c3b2;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 105%;
+}
+
+button:hover {
+  color: #111;
+}/*# sourceMappingURL=style.css.map */
